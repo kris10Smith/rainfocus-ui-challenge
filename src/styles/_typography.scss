@@ -1,0 +1,74 @@
+@use './variables' as *;
+
+.text-heading-1 {
+	font-family: $font-family-base;
+	font-size: $font-size-h1;
+	font-weight: $font-weight-light;
+	line-height: $line-height-tight;
+	color: $color-text-header-strong;
+}
+
+.text-heading-2 {
+	font-family: $font-family-base;
+	font-size: $font-size-h2;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-tight;
+	color: $color-text-header-strong;
+}
+
+.text-heading-3 {
+	font-family: $font-family-base;
+	font-size: $font-size-h3;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-tight;
+	color: $color-text-header-strong;
+	font-style: normal;
+}
+
+.text-body {
+	font-family: $font-family-base;
+	font-size: $font-size-body;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-body;
+	color: $color-text-body;
+}
+
+.text-step-label {
+	font-family: $font-family-base;
+	font-size: $font-size-step;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-tight;
+	color: $color-text-header-strong;
+}
+
+.text-step-title {
+	font-family: $font-family-base;
+	font-size: $font-size-step-title;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-tight;
+	color: $color-text-subtle;
+}
+
+.text-card-title {
+	font-family: $font-family-base;
+	font-size: $font-size-card-title;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-tight;
+	color: $color-text-header-strong;
+}
+
+.text-card-body {
+	font-family: $font-family-base;
+	font-size: $font-size-card-body;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-tight;
+	color: $color-text-body;
+}
+
+.text-button-primary {
+	font-family: $font-family-base;
+	font-size: $font-size-button;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-tight;
+	color: $color-button-primary-text;
+}

@@ -1,0 +1,85 @@
+@use "./rf-tokens";
+/* Typography */
+
+$font-family-base: 'Inter', sans-serif;
+
+$font-size-h1: 2rem;        // 32px
+$font-size-h2: 1.5rem;      // 24px
+$font-size-h3: 1.25rem;     // 20px;
+
+$font-size-step: 0.875rem;          // 14px "Step 1:"
+$font-size-step-title: 0.875rem;    // 14px "Base settings."
+$font-size-body: 1rem;              // 16px
+$font-size-card-title: 0.8125rem;   // 13px
+$font-size-card-body: 0.75rem;      // 12px
+$font-size-button: 0.875rem;        // 14px
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-body: 1.5rem; // 24px
+$line-height-tight: 1;     // "normal" in Figma
+
+
+/* Colors – mapped to RF tokens */
+
+$color-surface: var(--rf-brand-color-surface);
+$color-text-body: var(--rf-brand-color-text-body);
+$color-border: var(--rf-brand-color-border);
+$color-primary: var(--rf-brand-color-primary);
+
+$color-button-primary-bg: var(--rf-comp-button-primary-color-background);
+$color-button-primary-text: var(--button-primary-color-on-background);
+
+$color-brand-berry: var(--brand-primary-berry);
+$color-brand-pink: var(--brand-primary-pink);
+$color-brand-secondary-grape: var(--brand-secondary-grape);
+$color-complimentary-grape-3: var(--complimentary-grape-3);
+
+$color-neutral-g3: var(--neutral-g3);
+$color-neutral-white: var(--neutral-white);
+
+$color-text-header-strong: var(--text-g1-header);
+$color-text-subtle: var(--text-g3-text);
+
+
+/* Spacing scale */
+
+$space-xxs: 0.25rem; // 4px
+$space-xs: 0.5rem;   // 8px
+$space-sm: 0.75rem;  // 12px
+$space-md: 1rem;     // 16px
+$space-lg: 1.5rem;   // 24px
+$space-xl: 2rem;     // 32px
+$space-2xl: 2.5rem;  // 40px
+$space-3xl: 3rem;    // 48px
+
+
+/* Radii */
+
+$radius-sm: 0.25rem; // 4px
+$radius-md: 0.5rem;  // 8px
+
+
+/* Layout */
+
+$sidebar-width: 3.9375rem;  // ~63px
+$frame-height: 64rem;       // Figma artboard height
+$body-padding-y: 2.5rem;
+$body-padding-x: 3rem;
+
+
+/* Breakpoints */
+
+$bp-desktop: 1024px; // tablets & small laptops and below
+$bp-tablet: 768px;   // tablet portrait and below
+$bp-mobile: 480px;   // small phones and down to 320px
+
+
+/* Alias tokens for global usage */
+
+$font-base: $font-family-base;
+$color-bg: $color-surface;
+$color-text: $color-text-body;

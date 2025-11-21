@@ -1,0 +1,245 @@
+@use "./variables" as *;
+
+.event-setup-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: $space-2xl;
+}
+
+.event-setup-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	align-self: stretch;
+	> * {
+		margin: 0;
+	}
+}
+
+.event-setup-title {
+	/* typography handled by .text-heading-2 */
+}
+
+.event-setup-description {
+	/* typography handled by .text-body */
+}
+
+/* Attendee section */
+
+.attendee-section {
+	padding-top: $space-lg;
+	border-top: 1px solid $color-border;
+}
+
+.attendee-inner-wrapper {
+	max-width: 67.0625rem; 
+	display: flex;
+	flex-direction: column;
+	gap: $space-lg;
+}
+
+.attendee-header {
+	display: flex;
+	align-items: center;
+	gap: $space-sm;
+}
+
+.attendee-icon {
+	width: 2.1875rem;
+	height: 2.1875rem;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.attendee-title {
+	margin: 0;
+	/* typography handled by .text-heading-3 */
+}
+
+/* Step label row: "Step 1: Base settings." */
+
+.step-heading-row {
+	display: flex;
+	gap: 1ch;
+	margin-bottom: $space-xs;
+}
+
+.step-label {
+	/* typography handled by .text-step-label */
+}
+
+.step-title {
+	/* typography handled by .text-step-title */
+}
+
+/* Step 1 row (long card) */
+
+.step-row-long {
+	display: flex;
+	flex-wrap: wrap;
+	padding: $space-md 1.5rem;
+	align-items: flex-start;
+	gap: 2rem;
+	border-radius: $radius-sm;
+	border: 1px solid $color-border;
+	background-color: $color-surface;
+	width: 100%;
+}
+
+.step-row-long-item {
+	display: flex;
+	padding: $space-xs;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: $space-xxs;
+	border-radius: $radius-sm;
+	background-color: $color-surface;
+	flex: 0 0 13.8125rem;
+}
+
+/* Step 2 cards – grid */
+
+.step-row-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: $space-lg;
+	width: 100%;
+}
+
+.card-standard {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1 1 21.35419rem;     
+	max-width: 21.35419rem;
+	padding: $space-lg $space-xl;
+	gap: $space-xxs;
+	border-radius: $radius-sm;
+	border: 1px solid $color-border;
+	background-color: $color-surface;
+}
+
+.card-centered {
+	@extend .card-standard;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-title-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $space-xs;
+}
+
+.card-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/* Step 3 single card */
+
+.step-row-single {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	width: 100%;
+}
+
+/* ===========================
+   Responsive sections / cards
+   =========================== */
+
+/* Desktop-down: allow wrapping of Step 2 grid */
+
+@media (max-width: #{$bp-desktop}) {
+	.step-row-grid {
+		flex-wrap: wrap;
+	}
+
+	.card-standard,
+	.card-centered {
+		width: min(100%, 21.35419rem);
+	}
+	
+	.step-row-long {
+		max-width: 100%;
+	}
+	
+	.step-row-long-item {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+}
+
+/* Tablet: stack long row + cards vertically */
+
+@media (max-width: #{$bp-tablet}) {
+	.event-setup-section {
+		gap: $space-md;
+	}
+
+	.attendee-section {
+		gap: $space-md;
+	}
+
+	.step-row-long {
+		flex-direction: column;
+		align-items: stretch;
+		gap: $space-sm;
+	}
+
+	.step-row-grid {
+		flex-direction: column;
+		gap: $space-md;
+	}
+
+	.step-row-single {
+		flex-direction: column;
+	}
+
+	.card-standard,
+	.card-centered {
+		flex: 0 0 auto;
+		width: 100%;
+		padding: $space-md $space-md;
+	}
+}
+
+/* Mobile: tighten spacing further */
+
+@media (max-width: #{$bp-mobile}) {
+	.event-setup-header {
+		gap: 0.25rem;
+	}
+
+	.event-setup-description {
+		font-size: 0.9375rem;
+	}
+
+	.attendee-header {
+		gap: $space-xs;
+	}
+
+	.step-heading-row {
+		margin-bottom: $space-xs;
+	}
+
+	.step-row-long {
+		padding: $space-sm $space-sm;
+	}
+
+	.card-standard,
+	.card-centered {
+		padding: $space-sm $space-sm;
+	}
+
+	.text-card-body {
+		font-size: 0.75rem;
+	}
+}
