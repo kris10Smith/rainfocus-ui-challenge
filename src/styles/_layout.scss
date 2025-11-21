@@ -66,9 +66,12 @@
 	height: 2rem;
 	border-radius: 0.25rem;
 	overflow: hidden;
-	background-position: center;
-	background-size: cover;
+	//background-size: cover;
+	
+	background-image: url("/img/small-logo.svg");
 	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
 .left-rail-user {
@@ -162,14 +165,40 @@
 	gap: 0.625rem;
 	border-radius: $radius-sm;
 	border: none;
-	background-color: $color-button-primary-bg;
+	background-color: $color-button-primary-bg; 
 	color: $color-button-primary-text;
 	font-family: $font-family-base;
 	font-size: $font-size-button;
 	font-weight: $font-weight-bold;
 	line-height: $line-height-tight;
 	cursor: pointer;
+
+	transition:
+		background-color 120ms ease-out,
+		transform 75ms ease-out;
+
+	&:hover {
+		background-color: $color-button-primary-hover;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $color-button-primary-hover;
+		outline-offset: 3px;
+	}
+
+	&:active {
+		background-color: $color-button-primary-active;
+		transform: translateY(1px);
+	}
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+		transform: none;
+	}
 }
+
+
 
 /* ===========================
    Responsive layout
